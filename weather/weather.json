@@ -1,0 +1,369 @@
+[
+  {
+    "date": "Sun, 28 Jan",
+    "summary": "Periods of snow mixed with rain",
+    "periodID": 1,
+    "periodLabel": "Today",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "1",
+      "units": "hours"
+    },
+    "temperatureText": "High plus 2.",
+    "humidex": [],
+    "precip": "60",
+    "frost": {
+      "textSummary": ""
+    },
+    "titleText": "Today: Periods of snow mixed with rain. High plus 2. POP 60%",
+    "temperature": {
+      "periodHigh": 2,
+      "metric": "2",
+      "imperial": "36"
+    },
+    "iconCode": "15",
+    "text": "Mainly cloudy. 60 percent chance of snow or rain early this afternoon. Wind northeast 20 km/h gusting to 40. High plus 2. UV index 1 or low."
+  },
+  {
+    "date": "Sun, 28 Jan",
+    "summary": "Chance of flurries",
+    "periodID": 2,
+    "periodLabel": "Tonight",
+    "windChill": {
+      "frostbite": "",
+      "calculated": [
+        {
+          "unitType": "metric",
+          "index": "1",
+          "class": "near",
+          "value": "-7"
+        }
+      ],
+      "textSummary": "Wind chill near minus 7."
+    },
+    "sun": [],
+    "temperatureText": "Low minus 1.",
+    "humidex": [],
+    "precip": "30",
+    "frost": {
+      "textSummary": ""
+    },
+    "titleText": "Tonight: Chance of flurries. Low minus 1. POP 30%",
+    "temperature": {
+      "metric": "-1",
+      "imperial": "30",
+      "periodLow": -1
+    },
+    "iconCode": "16",
+    "text": "Cloudy. 30 percent chance of flurries late this evening and overnight. Wind northeast 20 km/h. Low minus 1. Wind chill near minus 7."
+  },
+  {
+    "date": "Mon, 29 Jan",
+    "summary": "A mix of sun and cloud",
+    "periodID": 3,
+    "periodLabel": "Mon, 29 Jan",
+    "windChill": {
+      "frostbite": "",
+      "calculated": [
+        {
+          "unitType": "metric",
+          "index": "1",
+          "class": "morning",
+          "value": "-7"
+        }
+      ],
+      "textSummary": "Wind chill minus 7 in the morning."
+    },
+    "sun": {
+      "value": "5",
+      "units": "hours"
+    },
+    "temperatureText": "High plus 2.",
+    "humidex": [],
+    "precip": "",
+    "frost": {
+      "textSummary": ""
+    },
+    "titleText": "Mon, 29 Jan: A mix of sun and cloud. High plus 2.",
+    "temperature": {
+      "periodHigh": 2,
+      "metric": "2",
+      "imperial": "36"
+    },
+    "iconCode": "02",
+    "text": "A mix of sun and cloud. Wind northeast 20 km/h becoming light early in the morning. High plus 2. Wind chill minus 7 in the morning. UV index 1 or low."
+  },
+  {
+    "date": "Mon, 29 Jan",
+    "summary": "Cloudy periods",
+    "periodID": 4,
+    "periodLabel": "Night",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "0",
+      "units": "hours"
+    },
+    "temperatureText": "Low minus 2.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "",
+    "titleText": "Night: Cloudy periods. Low minus 2.",
+    "temperature": {
+      "metric": "-2",
+      "imperial": "28",
+      "periodLow": -2
+    },
+    "iconCode": "32",
+    "text": "Increasing cloudiness. Low minus 2."
+  },
+  {
+    "date": "Tue, 30 Jan",
+    "summary": "Chance of flurries or rain showers",
+    "periodID": 5,
+    "periodLabel": "Tue, 30 Jan",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "1",
+      "units": "hours"
+    },
+    "temperatureText": "High plus 2.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "30",
+    "titleText": "Tue, 30 Jan: Chance of flurries or rain showers. High plus 2. POP 30%",
+    "temperature": {
+      "periodHigh": 2,
+      "metric": "2",
+      "imperial": "36"
+    },
+    "iconCode": "15",
+    "text": "Cloudy with 30 percent chance of flurries or rain showers. High plus 2."
+  },
+  {
+    "date": "Tue, 30 Jan",
+    "summary": "Chance of flurries or rain showers",
+    "periodID": 6,
+    "periodLabel": "Night",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "0",
+      "units": "hours"
+    },
+    "temperatureText": "Low zero.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "30",
+    "titleText": "Night: Chance of flurries or rain showers. Low zero. POP 30%",
+    "temperature": {
+      "metric": "0",
+      "imperial": "32",
+      "periodLow": 0
+    },
+    "iconCode": "15",
+    "text": "Cloudy with 30 percent chance of flurries or rain showers. Low zero."
+  },
+  {
+    "date": "Wed, 31 Jan",
+    "summary": "A mix of sun and cloud",
+    "periodID": 7,
+    "periodLabel": "Wed, 31 Jan",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "6",
+      "units": "hours"
+    },
+    "temperatureText": "High plus 4.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "",
+    "titleText": "Wed, 31 Jan: A mix of sun and cloud. High plus 4.",
+    "temperature": {
+      "periodHigh": 4,
+      "metric": "4",
+      "imperial": "39"
+    },
+    "iconCode": "02",
+    "text": "A mix of sun and cloud. High plus 4."
+  },
+  {
+    "date": "Wed, 31 Jan",
+    "summary": "Clear",
+    "periodID": 8,
+    "periodLabel": "Night",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "0",
+      "units": "hours"
+    },
+    "temperatureText": "Low plus 1.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "",
+    "titleText": "Night: Clear. Low plus 1.",
+    "temperature": {
+      "metric": "1",
+      "imperial": "34",
+      "periodLow": 1
+    },
+    "iconCode": "30",
+    "text": "Clear. Low plus 1."
+  },
+  {
+    "date": "Thu, 1 Feb",
+    "summary": "A mix of sun and cloud",
+    "periodID": 9,
+    "periodLabel": "Thu, 1 Feb",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "5",
+      "units": "hours"
+    },
+    "temperatureText": "High plus 4.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "",
+    "titleText": "Thu, 1 Feb: A mix of sun and cloud. High plus 4.",
+    "temperature": {
+      "periodHigh": 4,
+      "metric": "4",
+      "imperial": "39"
+    },
+    "iconCode": "02",
+    "text": "A mix of sun and cloud. High plus 4."
+  },
+  {
+    "date": "Thu, 1 Feb",
+    "summary": "Cloudy",
+    "periodID": 10,
+    "periodLabel": "Night",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "0",
+      "units": "hours"
+    },
+    "temperatureText": "Low minus 1.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "",
+    "titleText": "Night: Cloudy. Low minus 1.",
+    "temperature": {
+      "metric": "-1",
+      "imperial": "30",
+      "periodLow": -1
+    },
+    "iconCode": "10",
+    "text": "Cloudy. Low minus 1."
+  },
+  {
+    "date": "Fri, 2 Feb",
+    "summary": "A mix of sun and cloud",
+    "periodID": 11,
+    "periodLabel": "Fri, 2 Feb",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "4",
+      "units": "hours"
+    },
+    "temperatureText": "High plus 3.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "",
+    "titleText": "Fri, 2 Feb: A mix of sun and cloud. High plus 3.",
+    "temperature": {
+      "periodHigh": 3,
+      "metric": "3",
+      "imperial": "37"
+    },
+    "iconCode": "02",
+    "text": "A mix of sun and cloud. High plus 3."
+  },
+  {
+    "date": "Fri, 2 Feb",
+    "summary": "Cloudy periods",
+    "periodID": 12,
+    "periodLabel": "Night",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "0",
+      "units": "hours"
+    },
+    "temperatureText": "Low minus 5.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "",
+    "titleText": "Night: Cloudy periods. Low minus 5.",
+    "temperature": {
+      "metric": "-5",
+      "imperial": "23",
+      "periodLow": -5
+    },
+    "iconCode": "32",
+    "text": "Cloudy periods. Low minus 5."
+  },
+  {
+    "date": "Sat, 3 Feb",
+    "summary": "A mix of sun and cloud",
+    "periodID": 13,
+    "periodLabel": "Sat, 3 Feb",
+    "windChill": {
+      "calculated": [],
+      "textSummary": ""
+    },
+    "sun": {
+      "value": "5",
+      "units": "hours"
+    },
+    "temperatureText": "High plus 1.",
+    "humidex": {
+      "textSummary": ""
+    },
+    "precip": "",
+    "titleText": "Sat, 3 Feb: A mix of sun and cloud. High plus 1.",
+    "temperature": {
+      "periodHigh": 1,
+      "metric": "1",
+      "imperial": "34"
+    },
+    "iconCode": "02",
+    "text": "A mix of sun and cloud. High plus 1."
+  }
+]
