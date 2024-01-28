@@ -8,12 +8,20 @@ function getIconUrl(code) {
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
-const forecasts = await fetch("https://weather.gc.ca/api/app/en/Location/ON-143?type=city",
-    { mode: "cors" })
-    .then(res => res.json()).then(res => res[0]["dailyFcst"]["daily"]);
-const indexHtml = await readFile(path.join(dirname, "index.tmpl.html"));
 
-const saturdays = forecasts.filter(d => d.date.startsWith("Sat"))
+async function fetchWeather() {
+    const forecasts = await fetch("https://weather.gc.ca/api/app/en/Location/ON-143?type=city")
+        .then(res => res.json()).then(res => res[0]["dailyFcst"]["daily"]);
+    const saturdays = forecasts.filter(d => d.date.startsWith("Sat"))
+    return saturdays
+
+}
+
+async function readTemplate() {
+    return (await readFile(path.join(dirname, "index.tmpl.html"))).toString();
+}
+
+const [saturdays, template] = await Promise.all([fetchWeather(), readTemplate()])
 const content = saturdays.map(day => `
 <tr>
     <th class="date">${day["periodLabel"]}</th>
@@ -25,5 +33,5 @@ const content = saturdays.map(day => `
     </td>
 <tr>`).join("\n")
 
-const output = indexHtml.toString().replace(`<!-- Content here -->`, content)
+const output = template.replace(`<!-- Content here -->`, content)
 await writeFile(path.join(dirname, "index.html"), output)
