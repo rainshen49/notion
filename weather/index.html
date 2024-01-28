@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next weekend weather</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         .overlay {
             color: inherit;
             text-decoration: inherit;
@@ -13,9 +18,9 @@
 
         .container {
             font-family: sans-serif;
-            margin: 0 1rem;
             border-radius: 0.6rem;
             background-color: rgb(228, 243, 248);
+            width: 100%;
 
             .date {
                 text-align: left;
@@ -32,6 +37,7 @@
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
                 height: 2rem;
+                text-align: right;
             }
         }
     </style>
@@ -62,8 +68,8 @@
         <td class="summary">${day["summary"]}</td>
         <td class="temp">${day["temperature"]["periodHigh"] ?? day["temperature"]["periodLow"]} ℃
         </td>
-        <td>
-            <img class="icon" src="${getIconUrl(day["iconCode"])}"></img>
+        <td class="icon">
+            <img src="${getIconUrl(day["iconCode"])}"></img>
         </td>
     <tr>
                 `).join("\n")
