@@ -24,7 +24,8 @@ async function readTemplate() {
 const [saturdays, template] = await Promise.all([fetchWeather(), readTemplate()])
 const content = saturdays.map(day => `
 <tr>
-    <th class="date">${day["periodLabel"]}</th>
+    <th class="date-big">${day["periodLabel"]}</th>
+    <th class="date-small">${day["periodLabel"].split(",")[0]}</th>
     <td class="summary">${day["summary"]}</td>
     <td class="temp">${day["temperature"]["periodHigh"] ?? day["temperature"]["periodLow"]} ℃
     </td>

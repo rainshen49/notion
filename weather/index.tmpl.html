@@ -22,10 +22,15 @@
             background-color: rgb(228, 243, 248);
             width: 100%;
 
-            .date {
+            .date-big,
+            .date-small {
                 text-align: left;
                 padding-right: 1rem;
                 padding-left: 1rem;
+            }
+
+            .date-small {
+                display: none;
             }
 
             .temp {
@@ -37,8 +42,30 @@
             .icon {
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
-                height: 2rem;
                 text-align: right;
+
+                img {
+                    height: 3rem;
+                }
+            }
+
+            /* Small screen */
+            @media (max-width: 400px) {
+                .summary {
+                    display: none;
+                }
+
+                .date-small {
+                    display: table-cell;
+                }
+
+                .date-big {
+                    display: none;
+                }
+
+                .icon img {
+                    height: 2rem;
+                }
             }
         }
     </style>
