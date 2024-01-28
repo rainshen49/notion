@@ -49,33 +49,10 @@
         target="_blank">
         <table class="container">
             <tbody id="root">
+                <!-- Content here -->
             </tbody>
         </table>
     </a>
-    <script type="module">
-        function getIconUrl(code) {
-            return `https://weather.gc.ca/weathericons/${code}.gif`
-        }
-
-        const el = document.getElementById("root")
-        fetch("weather.json")
-            .then(res => res.json())
-            .then(forecasts => {
-                // TODO: add windchill
-                const saturdays = forecasts.filter(d => d.date.startsWith("Sat"))
-                el.innerHTML = saturdays.map(day => `
-    <tr>
-        <th class="date">${day["periodLabel"]}</th>
-        <td class="summary">${day["summary"]}</td>
-        <td class="temp">${day["temperature"]["periodHigh"] ?? day["temperature"]["periodLow"]} ℃
-        </td>
-        <td class="icon">
-            <img src="${getIconUrl(day["iconCode"])}"></img>
-        </td>
-    <tr>
-                `).join("\n")
-            });
-    </script>
 </body>
 
 </html>

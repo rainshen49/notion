@@ -129,5 +129,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Local weather data for testing
+# For local testing only
 weather/weather.json
+weather/index.html
