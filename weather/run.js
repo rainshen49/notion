@@ -27,7 +27,7 @@ const content = saturdays.map(day => `
     <th class="date-big">${day["periodLabel"]}</th>
     <th class="date-small">${day["periodLabel"].split(",")[0]}</th>
     <td class="summary">${day["summary"]}</td>
-    <td class="temp">${day["temperature"]["periodHigh"] ?? day["temperature"]["periodLow"]} ℃
+    <td class="temp">${day["temperature"]["periodHigh"] ?? day["temperature"]["periodLow"]}°
     </td>
     <td class="icon">
     <img src="${getIconUrl(day["iconCode"])}"></img>
