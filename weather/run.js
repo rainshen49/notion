@@ -23,16 +23,16 @@ async function readTemplate() {
 
 const [saturdays, template] = await Promise.all([fetchWeather(), readTemplate()])
 const content = saturdays.map(day => `
-<tr>
-    <th class="date-big">${day["periodLabel"]}</th>
-    <th class="date-small">${day["periodLabel"].split(",")[0]}</th>
-    <td class="summary">${day["summary"]}</td>
-    <td class="temp">${day["temperature"]["periodHigh"] ?? day["temperature"]["periodLow"]}°
-    </td>
-    <td class="icon">
-    <img src="${getIconUrl(day["iconCode"])}"></img>
-    </td>
-<tr>`).join("\n")
+<div class="weather-block">
+    <div class="date-big">${day["periodLabel"]}</div>
+    <div class="date-small">${day["periodLabel"].split(",")[0]}</div>
+    <div class="summary">${day["summary"]}</div>
+    <div class="temp">${day["temperature"]["periodHigh"] ?? day["temperature"]["periodLow"]}°
+    </div>
+    <div class="icon">
+        <img src="${getIconUrl(day["iconCode"])}"></img>
+    </div>
+</div>`).join("\n")
 
 const output = template.replace(`<!-- Content here -->`, content)
 await writeFile(path.join(dirname, "index.html"), output)
