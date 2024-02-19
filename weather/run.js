@@ -52,9 +52,9 @@ const [saturdays, template, sunset] = await Promise.all([fetchWeather(), readTem
 
 const content = saturdays.map((day, i) => `
 <div class="weather-block">
-    <div class="date-big">${day["periodLabel"]}</div>
-    <div class="date-small">${day["periodLabel"].split(",")[0]}</div>
-    <div class="summary">${day["summary"]}${i == 1 ? ` (sunset ${sunset})` : ""}</div>
+    <div class="date-big">${i == 1 ? `Sunset ${sunset}` : day["periodLabel"]}</div>
+    <div class="date-small">${i == 1 ? `Sunset ${sunset}` : day["periodLabel"].split(",")[0]}</div>
+    <div class="summary">${day["summary"]}</div>
     <div class="temp">${day["temperature"]["periodHigh"] ?? day["temperature"]["periodLow"]}°
     </div>
     <div class="icon">
