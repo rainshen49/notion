@@ -10,11 +10,10 @@ const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 async function fetchWeather() {
-    const forecasts = await fetch("https://weather.gc.ca/api/app/en/Location/ON-143?type=city")
+    const forecasts = await fetch("https://weather.gc.ca/api/app/en/Location/43.655,-79.383?type=city")
         .then(res => res.json()).then(res => res[0]["dailyFcst"]["daily"]);
     const saturdays = forecasts.filter(d => d.date.startsWith("Sat"))
     return saturdays
-
 }
 
 function getNextSaturday() {
