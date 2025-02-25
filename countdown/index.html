@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Montserrat, Helvetica, "Gill Sans", "Bebas Neue", Lato, Roboto, sans-serif;
+        }
+
+        main {
+            height: 105dvh;
+            width: 100dvw;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .left,
+        .right {
+            height: 105dvh;
+            flex-grow: 1;
+            transition: flex-grow 0.3s ease-out;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .left:hover,
+        .right:hover {
+            flex-grow: 1.5;
+
+            .city {
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+
+            .arrow {
+                visibility: visible;
+            }
+        }
+
+        .left {
+            background-image: url("assets/rock_rain.jpg");
+            background-position: bottom left;
+        }
+
+        .right {
+            background-image: url("assets/toronto_island.jpg");
+            background-position: bottom right;
+        }
+
+        .city {
+            font-size: xx-large;
+            margin-top: 30dvh;
+            text-align: center;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            line-height: 5rem;
+
+            transition: background-color 0.3s ease-out;
+        }
+
+        a,
+        a:visited {
+            text-decoration: inherit;
+        }
+
+        .arrow {
+            visibility: hidden;
+
+            position: absolute;
+
+            bottom: 10dvh;
+            left: 4dvw;
+            right: 4dvw;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border: 2px solid white;
+            border-radius: 25px;
+            /* Rounded corners */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            background: rgba(255, 255, 255, 0.2);
+            /* Improves contrast */
+        }
+
+        .button:hover {
+            background: rgba(255, 255, 255, 0.4);
+            /* Subtle hover effect */
+        }
+
+        .button:active {
+            background: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="left" tabindex="0">
+            <h2 class="city">
+                Vancouver time
+            </h2>
+            <a href="vancouver.html" class="arrow button">Go</a>
+        </div>
+        <div class="right" tabindex="0">
+            <h2 class="city">
+                Toronto time
+            </h2>
+            <a href="toronto.html" class="arrow button">Go</a>
+        </div>
+    </main>
+</body>
+
+</html>
