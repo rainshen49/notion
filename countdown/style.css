@@ -1,0 +1,12 @@
+/* Shared styles */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, Helvetica, "Gill Sans", "Bebas Neue", Lato, Roboto, sans-serif;
+}
+
+main {
+    height: 105dvh;
+    width: 100dvw;
+}
