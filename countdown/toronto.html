@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toronto Count Down</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="countdown.css">
+    <style>
+        main {
+            background-image: url("assets/toronto_island.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="countdown__content">
+            <h1 class="title" title="Birthday Countdown">Birthday Countdown</h1>
+            <div class="digit" data-tad-bind="hours">
+                <div id="hour" class="digit-number">25</div>
+                <div id="hourt" class="digit-label">HOURS</div>
+            </div>
+            <div class="digit" data-tad-bind="minutes">
+                <div id="minute" class="digit-number">03</div>
+                <div id="minutet" class="digit-label">MINUTES</div>
+            </div>
+            <div class="digit" data-tad-bind="seconds">
+                <div id="second" class="digit-number">19</div>
+                <div id="secondt" class="digit-label">SECONDS</div>
+            </div>
+        </div>
+        <div class="video-container hidden">
+            <video id="fireworks" src="assets/Toronto Fireworks.mp4" controls></video>
+            <button class="close" onclick="closeVideo()">⤫</button>
+        </div>
+    </main>
+    <script>
+        // const torontoGoal = 1742011199000
+        const goal = new Date().getTime() + 2000
+    </script>
+    <script src="countdown.js">
+    </script>
+</body>
+
+</html>

@@ -5,52 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vancouver Count Down</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="countdown.css">
     <style>
         main {
-            background-size: cover;
-            background-repeat: no-repeat;
             background-image: url("assets/rock_rain.jpg");
-            background-position: center;
-        }
-
-        .countdown__content {
-            display: flex;
-            flex-wrap: wrap;
-            position: absolute;
-            top: 24dvh;
-            left: 10dvw;
-            right: 10dvw;
-            color: white;
-        }
-
-        .title {
-            width: 100%;
-            text-align: center;
-            font-family: cursive;
-            font-size: max(4dvw, 36px);
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-            font-weight: bolder;
-        }
-
-        .digit {
-            background-color: rgba(40, 50, 61, .62);
-            flex-grow: 1;
-            text-align: center;
-            padding-bottom: 8px;
-        }
-
-        .digit-number {
-            font-size: 15dvw;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        .digit-label {
-            font-size: min(4dvw, 28px);
-        }
-
-        #second.close {
-            color: red;
         }
     </style>
 </head>
@@ -60,52 +20,28 @@
         <div class="countdown__content">
             <h1 class="title" title="Birthday Countdown">Birthday Countdown</h1>
             <div class="digit" data-tad-bind="hours">
-                <div id="hour" class="digit-number">04</div>
+                <div id="hour" class="digit-number">25</div>
                 <div id="hourt" class="digit-label">HOURS</div>
             </div>
             <div class="digit" data-tad-bind="minutes">
-                <div id="minute" class="digit-number">25</div>
+                <div id="minute" class="digit-number">03</div>
                 <div id="minutet" class="digit-label">MINUTES</div>
             </div>
             <div class="digit" data-tad-bind="seconds">
-                <div id="second" class="digit-number">50</div>
+                <div id="second" class="digit-number">19</div>
                 <div id="secondt" class="digit-label">SECONDS</div>
             </div>
         </div>
+        <div class="video-container hidden">
+            <video id="fireworks" src="assets/Vancouver Fireworks.mp4" controls></video>
+            <button class="close" onclick="closeVideo()">⤫</button>
+        </div>
     </main>
     <script>
-        // TODO: Play music
-        const hourEl = document.getElementById("hour")
-        const minuteEl = document.getElementById("minute")
-        const secondEl = document.getElementById("second")
-
         // const vancouverGoal = 1742011199000 + 3 * 3600000
-        const goal = new Date().getTime() + 20000
-
-        const timer = setInterval(() => {
-            const now = new Date().getTime()
-            let diff = goal - now
-
-            if (diff <= 10000) {
-                secondEl.classList.add("close")
-            }
-
-            if (diff <= 0) {
-                clearInterval(timer)
-                // TODO: Play fireworks
-                return
-            }
-
-            const hours = Math.floor(diff / 3600000)
-            diff -= 3600000 * hours
-            const minutes = Math.floor(diff / 60000)
-            diff -= 60000 * minutes
-            const seconds = Math.floor(diff / 1000)
-
-            hourEl.textContent = `${hours < 10 ? "0" : ""}${hours}`
-            minuteEl.textContent = `${minutes < 10 ? "0" : ""}${minutes}`
-            secondEl.textContent = `${seconds < 10 ? "0" : ""}${seconds}`
-        }, 100)
+        const goal = new Date().getTime() + 2000
+    </script>
+    <script src="countdown.js">
     </script>
 </body>
 

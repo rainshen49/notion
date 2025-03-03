@@ -1,0 +1,73 @@
+main {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.countdown__content {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 24dvh;
+    left: 10dvw;
+    right: 10dvw;
+    color: white;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-family: cursive;
+    font-size: max(4dvw, 36px);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    font-weight: bolder;
+    z-index: 2;
+}
+
+.digit {
+    background-color: rgba(40, 50, 61, .62);
+    flex-grow: 1;
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.digit-number {
+    font-size: 15dvw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.digit-label {
+    font-size: min(4dvw, 28px);
+}
+
+#second.close {
+    color: red;
+}
+
+.video-container.hidden {
+    display: none;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    height: 100%;
+}
+
+video {
+    z-index: 1;
+    flex-grow: 1;
+}
+
+button.close {
+    z-index: 1;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    color: white;
+    border: none;
+    background: none;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
